@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li data-page="dashboard">
+                        <i class="fas fa-home"></i> Dashboard
+                    </li>
+                    <li data-page="users">
+                        <i class="fas fa-users"></i> Users
+                    </li>
+                    <li data-page="roles">
+                        <i class="fas fa-user-tag"></i> Roles
+                    </li>
+                    <li data-page="permissions">
+                        <i class="fas fa-key"></i> Permissions
+                    </li>
+                    <li data-page="audit">
+                        <i class="fas fa-history"></i> Audit Logs
+                    </li>
+                    <li data-page="settings">
+                        <i class="fas fa-cog"></i> Settings
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="breadcrumb" id="breadcrumb">
+                    Dashboard
+                </div>
+                <div class="user-info">
+                    <span id="currentUser"></span>
+                    <img src="../assets/default-avatar.png" alt="User" class="avatar">
+                </div>
+            </div>
+
+            <!-- Dynamic Content Area -->
+            <div class="content-area" id="contentArea">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Component -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/admin/index.js"></script>
+</body>
+</html>

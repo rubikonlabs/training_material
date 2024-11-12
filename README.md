@@ -1,1 +1,1 @@
-# training_material
+# Sample Training Material
